@@ -22,11 +22,12 @@ export default function Rightbar(){
       }
 
     return(
+      <>
         <div className="rightbar">
-        {/*    <div className="messangers share">
-        //         <p>Patrick</p>
-        //     </div>}
- <> {/*          <Sidebar/>  */}
+           <div className="messangers share">
+                <p>Patrick</p>
+           </div>
+         <Sidebar/>  
              <form action='' onSubmit={displayValues}>
          <label>Name:</label>   <input type="text" onChange={(e)=>{setName(name=e.target.value)}} /><br/>
          <label>Email:</label>   <input type="text" onChange={(e)=>{setEmail(email=e.target.value)}} /><br/>
@@ -35,7 +36,7 @@ export default function Rightbar(){
             <button onClick={clickCounter}>counter {count}</button>
             <h1 id='demo'></h1>
         </div>
-    
+        </>
 
     )
 }
