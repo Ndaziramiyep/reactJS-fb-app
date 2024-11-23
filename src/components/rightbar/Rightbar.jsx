@@ -26,6 +26,7 @@ export default function Rightbar(){
         <div className="rightbar">
            <div className="messangers share">
                 <p>Patrick</p>
+               <p>Ndaziramiye</p>
            </div>
          <Sidebar/>  
              <form action='' onSubmit={displayValues}>
