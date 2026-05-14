@@ -1,0 +1,286 @@
+.profilePage {
+  flex: 1;
+  background-color: #f0f2f5;
+  overflow-y: auto;
+  height: calc(100vh - 56px);
+}
+
+.profileCover {
+  position: relative;
+  height: 300px;
+  background-color: #ccc;
+}
+
+.profileCoverBg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1877f2, #42b72a);
+}
+
+.profileAvatarWrapper {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profileAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.profileInfo {
+  text-align: center;
+  padding: 60px 20px 20px;
+  background: white;
+}
+
+.profileName {
+  font-size: 24px;
+  font-weight: 700;
+  color: #050505;
+}
+
+.profileBio {
+  font-size: 14px;
+  color: #65676b;
+  margin: 6px 0 14px;
+}
+
+.profileStats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+.profileStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileStatNum {
+  font-size: 18px;
+  font-weight: 700;
+  color: #050505;
+}
+
+.profileStatLabel {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.profileActions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profileBtn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profileBtnPrimary {
+  background-color: #1877f2;
+  color: white;
+}
+
+.profileBtnPrimary:hover { background-color: #166fe5; }
+
+.profileBtnSecondary {
+  background-color: #e4e6eb;
+  color: #050505;
+}
+
+.profileBtnSecondary:hover { background-color: #d8dadf; }
+
+/* Tabs */
+.profileTabs {
+  display: flex;
+  background: white;
+  border-top: 1px solid #e4e6eb;
+  padding: 0 20px;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.profileTab {
+  padding: 14px 18px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #65676b;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.profileTab:hover { background-color: #f0f2f5; border-radius: 8px 8px 0 0; }
+
+.activeTab {
+  color: #1877f2;
+  border-bottom: 3px solid #1877f2;
+}
+
+/* Content */
+.profileContent {
+  max-width: 680px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.profilePostCard {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.profilePostHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profilePostAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profilePostUser {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #050505;
+}
+
+.profilePostDate {
+  display: block;
+  font-size: 12px;
+  color: #65676b;
+}
+
+.profilePostText {
+  font-size: 15px;
+  color: #050505;
+  margin-bottom: 10px;
+}
+
+.profilePostImg {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.profilePostStats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #65676b;
+  padding: 8px 0;
+}
+
+.profilePostHr {
+  border: none;
+  border-top: 1px solid #e4e6eb;
+}
+
+.profilePostActions {
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 0;
+}
+
+.profilePostBtn {
+  background: none;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #65676b;
+  cursor: pointer;
+  flex: 1;
+}
+
+.profilePostBtn:hover { background-color: #f0f2f5; }
+.profilePostBtn.liked { color: #1877f2; }
+
+/* About */
+.aboutCard {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+  color: #050505;
+}
+
+.aboutCard h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* Friends grid */
+.profileFriendsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.profileFriendCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.profileFriendImg {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.profileFriendName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #050505;
+  display: block;
+  margin-top: 6px;
+}
+
+/* Photos grid */
+.profilePhotosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.profilePhotoThumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+}

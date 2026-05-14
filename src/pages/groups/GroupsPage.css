@@ -1,0 +1,78 @@
+.groupsPage {
+  flex: 1;
+  background-color: #f0f2f5;
+  padding: 24px;
+  overflow-y: auto;
+  height: calc(100vh - 56px);
+}
+
+.groupsTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #050505;
+  margin-bottom: 20px;
+}
+
+.groupsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.groupCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.groupImg {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.groupInfo {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.groupName {
+  font-size: 15px;
+  font-weight: 700;
+  color: #050505;
+}
+
+.groupMembers {
+  font-size: 13px;
+  color: #65676b;
+}
+
+.groupBtn {
+  margin: 0 12px 12px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.groupBtnJoin {
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.groupBtnJoin:hover { background-color: #d0e8ff; }
+
+.groupBtnLeave {
+  background-color: #e4e6eb;
+  color: #050505;
+}
+
+.groupBtnLeave:hover { background-color: #d8dadf; }

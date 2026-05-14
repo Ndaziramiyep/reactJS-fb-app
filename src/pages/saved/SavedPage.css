@@ -1,0 +1,76 @@
+.savedPage {
+  flex: 1;
+  background-color: #f0f2f5;
+  padding: 24px;
+  overflow-y: auto;
+  height: calc(100vh - 56px);
+}
+
+.savedTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #050505;
+  margin-bottom: 20px;
+}
+
+.savedEmpty {
+  color: #65676b;
+  font-size: 15px;
+}
+
+.savedList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 680px;
+}
+
+.savedCard {
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.savedImg {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.savedInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.savedItemTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #050505;
+}
+
+.savedType {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.savedUnsaveBtn {
+  background-color: #e4e6eb;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #050505;
+  white-space: nowrap;
+}
+
+.savedUnsaveBtn:hover { background-color: #d8dadf; }

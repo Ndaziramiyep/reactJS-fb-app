@@ -1,0 +1,83 @@
+.marketplacePage {
+  flex: 1;
+  background-color: #f0f2f5;
+  padding: 24px;
+  overflow-y: auto;
+  height: calc(100vh - 56px);
+}
+
+.marketplaceTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #050505;
+  margin-bottom: 20px;
+}
+
+.marketplaceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.marketCard {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.marketCard:hover { transform: translateY(-3px); }
+
+.marketImg {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.marketInfo {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.marketPrice {
+  font-size: 17px;
+  font-weight: 700;
+  color: #050505;
+}
+
+.marketItemTitle {
+  font-size: 14px;
+  color: #050505;
+}
+
+.marketLocation, .marketSeller {
+  font-size: 12px;
+  color: #65676b;
+}
+
+.marketBtn {
+  margin: 0 12px 12px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #e7f3ff;
+  color: #1877f2;
+}
+
+.marketBtn:hover { background-color: #d0e8ff; }
+
+.marketBtnSent {
+  background-color: #e4e6eb;
+  color: #65676b;
+  cursor: default;
+}
