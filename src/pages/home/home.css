@@ -9,7 +9,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.homeContainer {
+.homeContainer,
+.homeContainerFull {
   display: flex;
   width: 100%;
+  height: calc(100vh - 56px);
+  overflow: hidden;
 }

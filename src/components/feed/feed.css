@@ -1,6 +1,9 @@
 .feed {
-  flex: 5.5;
+  flex: 1;
+  min-width: 0;
   background-color: #f0f2f5;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
 }
 
 .feedWrapper {

@@ -1,5 +1,6 @@
 .marketplacePage {
   flex: 1;
+  min-width: 0;
   background-color: #f0f2f5;
   padding: 24px;
   overflow-y: auto;

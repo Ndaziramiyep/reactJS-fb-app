@@ -1,9 +1,11 @@
 .rightbar {
-  flex: 3.5;
-  height: calc(100vh - 50px);
+  width: 320px;
+  flex-shrink: 0;
+  height: calc(100vh - 56px);
   overflow-y: scroll;
   position: sticky;
-  top: 50px;
+  top: 56px;
+  background-color: #fff;
 }
 
 .rightbar::-webkit-scrollbar {

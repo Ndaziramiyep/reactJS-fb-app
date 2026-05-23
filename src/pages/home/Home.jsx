@@ -13,28 +13,40 @@ import SavedPage from '../saved/SavedPage';
 import EventsPage from '../events/EventsPage';
 import "./home.css";
 
+const FULL_PAGES = ['profile', 'watch', 'groups', 'marketplace', 'saved', 'events'];
+
 function PageContent() {
   const { activePage } = useApp();
   switch (activePage) {
-    case 'profile':    return <ProfilePage />;
-    case 'watch':      return <WatchPage />;
-    case 'groups':     return <GroupsPage />;
-    case 'marketplace':return <MarketplacePage />;
-    case 'saved':      return <SavedPage />;
-    case 'events':     return <EventsPage />;
-    default:           return <><Feedbar /><Rightbar /></>;
+    case 'profile':     return <ProfilePage />;
+    case 'watch':       return <WatchPage />;
+    case 'groups':      return <GroupsPage />;
+    case 'marketplace': return <MarketplacePage />;
+    case 'saved':       return <SavedPage />;
+    case 'events':      return <EventsPage />;
+    default:            return null;
   }
 }
 
 function Layout() {
-  const { openChat } = useApp();
+  const { activePage, openChat } = useApp();
+  const isFullPage = FULL_PAGES.includes(activePage);
+
   return (
     <>
       <Topbar />
-      <div className="homeContainer">
-        <Sidebar />
-        <PageContent />
-      </div>
+      {isFullPage ? (
+        <div className="homeContainerFull">
+          <Sidebar />
+          <PageContent />
+        </div>
+      ) : (
+        <div className="homeContainer">
+          <Sidebar />
+          <Feedbar />
+          <Rightbar />
+        </div>
+      )}
       {openChat && <ChatWindow />}
     </>
   );
