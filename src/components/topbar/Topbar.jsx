@@ -23,6 +23,8 @@ export default function Topbar() {
     showNotifications, setShowNotifications,
     showFriendRequests, setShowFriendRequests,
     showProfileMenu, setShowProfileMenu,
+    showMessages, setShowMessages,
+    setOpenChat,
   } = useApp();
 
   const ref = useRef();
@@ -34,6 +36,7 @@ export default function Topbar() {
         setShowNotifications(false);
         setShowFriendRequests(false);
         setShowProfileMenu(false);
+        setShowMessages(false);
       }
     };
     document.addEventListener('mousedown', handler);
@@ -93,9 +96,36 @@ export default function Topbar() {
           </div>
 
           {/* Messenger */}
-          <div className="topbarIconItem" onClick={() => setActivePage('feed')}>
+          <div className="topbarIconItem" onClick={() => toggle(setShowMessages, showMessages, [setShowFriendRequests, setShowNotifications, setShowProfileMenu])}>
             <Chat />
             <span className="topbarIconBadge">2</span>
+            {showMessages && (
+              <div className="topbarDropdown">
+                <h4 className="dropdownTitle">Messages</h4>
+                {[
+                  { id: 1, name: "Sarah Johnson", img: "/assets/person/2.jpg", msg: "Hey! How are you?", time: "2m ago", unread: true },
+                  { id: 2, name: "Mike Williams", img: "/assets/person/3.jpg", msg: "See you tomorrow!", time: "20m ago", unread: true },
+                  { id: 3, name: "Emily Davis", img: "/assets/person/4.jpg", msg: "Thanks for the help 😊", time: "1h ago", unread: false },
+                  { id: 4, name: "James Brown", img: "/assets/person/5.jpg", msg: "Did you see the game?", time: "3h ago", unread: false },
+                ].map(m => (
+                  <div
+                    className={`dropdownMsgItem ${m.unread ? 'unread' : ''}`}
+                    key={m.id}
+                    onClick={() => { setOpenChat({ id: m.id, name: m.name, img: m.img }); setShowMessages(false); }}
+                  >
+                    <div className="dropdownMsgImgWrapper">
+                      <img src={m.img} alt={m.name} className="dropdownAvatar" />
+                    </div>
+                    <div className="dropdownInfo">
+                      <span className="dropdownName">{m.name}</span>
+                      <span className="dropdownSub">{m.msg}</span>
+                      <span className="dropdownTime">{m.time}</span>
+                    </div>
+                    {m.unread && <span className="dropdownUnreadDot" />}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Notifications */}

@@ -209,6 +209,38 @@
 }
 .dropdownNotifItem:hover { background-color: #f0f2f5; }
 
+/* Messages item */
+.dropdownMsgItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  position: relative;
+}
+.dropdownMsgItem:hover { background-color: #f0f2f5; }
+.dropdownMsgItem.unread { background-color: #f0f7ff; }
+.dropdownMsgItem.unread:hover { background-color: #e4f0ff; }
+
+.dropdownMsgImgWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dropdownTime {
+  font-size: 11px;
+  color: #1877f2;
+}
+
+.dropdownUnreadDot {
+  width: 10px;
+  height: 10px;
+  background-color: #1877f2;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
 /* Profile menu */
 .topbarProfileMenu { min-width: 260px; }
 

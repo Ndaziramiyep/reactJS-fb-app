@@ -9,6 +9,7 @@ export function AppProvider({ children }) {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showFriendRequests, setShowFriendRequests] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [showMessages, setShowMessages] = useState(false);
   const [friends, setFriends] = useState([1, 2]);
 
   const addFriend = (id) => setFriends(prev => [...prev, id]);
@@ -21,6 +22,7 @@ export function AppProvider({ children }) {
       showNotifications, setShowNotifications,
       showFriendRequests, setShowFriendRequests,
       showProfileMenu, setShowProfileMenu,
+      showMessages, setShowMessages,
       friends, addFriend, removeFriend,
     }}>
       {children}
