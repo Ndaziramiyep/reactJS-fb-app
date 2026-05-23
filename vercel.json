@@ -2,8 +2,5 @@
   "installCommand": "npm install --legacy-peer-deps",
   "buildCommand": "npm run build",
   "outputDirectory": "build",
-  "framework": "create-react-app",
-  "engines": {
-    "node": "18.x"
-  }
+  "framework": "create-react-app"
 }
