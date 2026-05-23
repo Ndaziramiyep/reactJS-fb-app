@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./feed.css"
 import Share from '../share/Share'
-import { ThumbUp, ChatBubbleOutline, Share as ShareIcon, Send, MoreVert } from '@material-ui/icons'
+import { ThumbUp, ChatBubbleOutline, Share as ShareIcon, Send, MoreVert } from '@mui/icons-material'
 
 const initialPosts = [
   {

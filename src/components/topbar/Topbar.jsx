@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Person, Chat, Notifications, Search } from "@material-ui/icons";
+import { Person, Chat, Notifications, Search } from "@mui/icons-material";
 import { useApp } from '../../context/AppContext';
 import "./topbar.css";
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./post.css"
-import { MoreVert, ThumbUp, ChatBubbleOutline, Share, Send } from '@material-ui/icons';
+import { MoreVert, ThumbUp, ChatBubbleOutline, Share, Send } from '@mui/icons-material';
 
 const POSTS = [
   {

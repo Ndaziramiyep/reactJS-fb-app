@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./share.css";
-import { EmojiEmotions, Label, PermMedia, Room, Close } from "@material-ui/icons";
+import { EmojiEmotions, Label, PermMedia, Room, Close } from "@mui/icons-material";
 
 export default function Share({ onPost }) {
   const [text, setText] = useState("");
   const [imgPreview, setImgPreview] = useState(null);
+  const [posted, setPosted] = useState(false);
 
   const handleImg = (e) => {
     const file = e.target.files[0];
@@ -16,7 +17,18 @@ export default function Share({ onPost }) {
     if (onPost) onPost({ text, img: imgPreview });
     setText("");
     setImgPreview(null);
+    setPosted(true);
+    setTimeout(() => setPosted(false), 2000);
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
+
+  const canPost = text.trim().length > 0 || imgPreview !== null;
 
   return (
     <div className="share">
@@ -29,13 +41,16 @@ export default function Share({ onPost }) {
             className="shareInput"
             value={text}
             onChange={e => setText(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         </div>
 
         {imgPreview && (
           <div className="shareImgPreview">
             <img src={imgPreview} alt="preview" className="sharePreviewImg" />
-            <button className="shareRemoveImg" onClick={() => setImgPreview(null)}><Close fontSize="small" /></button>
+            <button className="shareRemoveImg" onClick={() => setImgPreview(null)}>
+              <Close fontSize="small" />
+            </button>
           </div>
         )}
 
@@ -61,7 +76,13 @@ export default function Share({ onPost }) {
               <span className="shareOptionText">Feeling</span>
             </div>
           </div>
-          <button className="shareButton" onClick={handleSubmit}>Post</button>
+          <button
+            className={`shareButton ${!canPost ? "shareButtonDisabled" : ""}`}
+            onClick={handleSubmit}
+            disabled={!canPost}
+          >
+            {posted ? "✓ Posted!" : "Post"}
+          </button>
         </div>
       </div>
     </div>

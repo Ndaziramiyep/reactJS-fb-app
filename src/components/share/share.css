@@ -113,8 +113,18 @@
   font-weight: 600;
   cursor: pointer;
   color: white;
+  transition: background-color 0.2s;
 }
 
 .shareButton:hover {
   background-color: #166fe5;
+}
+
+.shareButtonDisabled {
+  background-color: #bcc0c4;
+  cursor: not-allowed;
+}
+
+.shareButtonDisabled:hover {
+  background-color: #bcc0c4;
 }

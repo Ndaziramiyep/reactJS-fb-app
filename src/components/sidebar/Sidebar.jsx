@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bookmark, HelpOutline, WorkOutline, Event, School, RssFeed, PlayCircleFilledOutlined, Group, Chat, ExpandMore, ExpandLess, Store, Flag } from "@material-ui/icons";
+import { Bookmark, HelpOutline, WorkOutline, Event, School, RssFeed, PlayCircleFilledOutlined, Group, Chat, ExpandMore, ExpandLess, Store, Flag } from "@mui/icons-material";
 import { useApp } from '../../context/AppContext';
 import "./sidebar.css";
 

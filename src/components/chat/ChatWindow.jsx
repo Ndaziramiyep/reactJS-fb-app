@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Close, Send } from '@material-ui/icons';
+import { Close, Send } from '@mui/icons-material';
 import { useApp } from '../../context/AppContext';
 import './ChatWindow.css';
 
