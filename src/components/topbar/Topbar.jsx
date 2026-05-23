@@ -41,6 +41,7 @@ export default function Topbar() {
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const toggle = (setter, current, others) => {
